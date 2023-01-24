@@ -1,0 +1,8 @@
+<ng-container *ngIf="isLoading">
+  <img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif">
+</ng-container>
+<ng-container *ngIf="!isLoading">
+  <div *ngFor="let person of people">
+    <h1>{{person.firstName}} {{person.lastName}}</h1>
+  </div>
+</ng-container>
