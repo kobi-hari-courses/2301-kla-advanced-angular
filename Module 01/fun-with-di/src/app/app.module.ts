@@ -8,7 +8,9 @@ import { GroupComponent } from './components/group/group.component';
 import { AdditionService } from './services/addition.service';
 import { WrongAdditionService } from './services/wrong-addition.service';
 import { StamComponent } from './components/stam/stam.component';
-import { NOW_TOKEN, PREFIX_TOKEN } from './constants/tokens';
+import { FOO_BAR_TOKEN, NOW_TOKEN, PREFIX_TOKEN } from './constants/tokens';
+import { SharedModule } from './shared/shared.module';
+import { Shared2Module } from './shared/shared-2.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NOW_TOKEN, PREFIX_TOKEN } from './constants/tokens';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    Shared2Module,
+    SharedModule, 
   ],
   providers: [
     {
@@ -37,7 +41,17 @@ import { NOW_TOKEN, PREFIX_TOKEN } from './constants/tokens';
     {
       provide: NOW_TOKEN, 
       useValue: () => new Date()
-    }
+    }, 
+    {
+      provide: FOO_BAR_TOKEN, 
+      useFactory: () => 42, 
+      multi: true
+    }, 
+    {
+      provide: FOO_BAR_TOKEN, 
+      useValue: 55, 
+      multi: true
+    }, 
   
   ],
   bootstrap: [AppComponent]
