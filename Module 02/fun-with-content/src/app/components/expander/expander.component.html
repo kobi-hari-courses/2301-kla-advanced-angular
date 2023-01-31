@@ -9,5 +9,9 @@
 </div>
 
 <div class="area button-area">
-    <ng-content select="[expander-toggle]"></ng-content>
+    <ng-content *ngIf="toggleFound" select="[expander-toggle]"></ng-content>
+    <button *ngIf="!toggleFound" (click)="toggle()">
+        <span *ngIf="isOpen">-</span>
+        <span *ngIf="!isOpen">+</span>
+    </button>
 </div>

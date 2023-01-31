@@ -1,0 +1,7 @@
+<span *ngIf="!expander?.isOpen">
+    <ng-content></ng-content>
+</span>
+
+<span *ngIf="expander?.isOpen">    
+    <ng-content select="[expander-on]"></ng-content>
+</span>
