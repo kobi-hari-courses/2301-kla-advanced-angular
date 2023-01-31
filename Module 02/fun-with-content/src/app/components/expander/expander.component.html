@@ -9,8 +9,5 @@
 </div>
 
 <div class="area button-area">
-    <button (click)="toggle()">
-        <span *ngIf="!isOpen">+</span>
-        <span *ngIf="isOpen">-</span>
-    </button>
+    <ng-content select="[expander-toggle]"></ng-content>
 </div>

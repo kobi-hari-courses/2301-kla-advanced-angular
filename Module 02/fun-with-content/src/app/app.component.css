@@ -18,3 +18,15 @@ h1.black {
     max-width: 20px;
     margin: 0px 10px;
 }
+
+.button-1 {
+    background-color: blue;
+    color: white;
+    border: 1px solid yellow;
+}
+
+.button-2 {
+    background-color: lime;
+    color: darkgreen;
+    border: 1px solid green;
+}
