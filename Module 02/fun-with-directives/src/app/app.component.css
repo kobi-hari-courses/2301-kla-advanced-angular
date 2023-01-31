@@ -1,0 +1,25 @@
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.owner {
+    position: relative;
+}
+
+.first {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border-left: 10px solid brown;
+    border-top: 10px solid magenta;
+}
+
+.second {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+   
+}

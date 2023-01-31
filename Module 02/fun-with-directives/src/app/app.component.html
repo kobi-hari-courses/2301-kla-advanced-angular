@@ -1,21 +1,33 @@
 <h1>Welcome, Today we talk about: </h1>
-<h2 highlight>Angular Directives</h2>
+<h2 highlight="pink">Angular Directives</h2>
 <h3>Agenda</h3>
+
+<div class="owner">
+    <div class="first" appMouseFollow  #moshe="mouse"></div>
+    <div class="second" [style.top]="moshe.y" [style.left]="moshe.x"></div>
+</div>
+
+<app-blank highlight="orange" (vansihed)="onVanish($event)" color="orange"></app-blank>
+    
+<img src="https://images.pexels.com/photos/1003914/pexels-photo-1003914.jpeg?auto=compress&cs=tinysrgb&w=1600">
+<img src="https://thumbs.dreamstime.com/b/rose-flower-love-garden-plant-backgrounds-valentines-day-49504517.jpg">
+
 
 <ul>
     <li class="x">What are Directives</li>
-    <li highlight>Creating a directive</li>
+    <li highlight="teal">Creating a directive</li>
     <li class="x y">Using the <strong>ElementRef</strong></li>
     <li>Using the Renderer</li>
     <li>HostBinding and HostListener</li>
     <li class="x z">Inputs</li>
-    <li highlight>Outputs</li>
-    <li>Shortcut syntax</li>
+    <li [highlight]="myFavoriteColor">Outputs</li>
+    <li xyz>Shortcut syntax</li>
     <li>Selectors</li>
-    <li>Export as and references in angular</li>
+    <li xyz>Export as and references in angular</li>
 </ul>
 
 <input type="text">
 <input type="number">
 <input type="checkbox">
 <input type="search">
+<input type="text">

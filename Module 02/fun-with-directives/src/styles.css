@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+}
+
+/* type selector / name selector */
+h1 {
+
+}
+
+/* class selector */
+.x {
+}
+
+/* id selector */
+#kobi {
+}
+
+[xyz] {
+}
+
+[type="text"] {
+    background: pink;
+}
+
+.x.y  {
+
+}
+
+h1.x[bla] {
+
+}
+
+div.first section.bla {
+
+}
+
+div > a {
+
+}
