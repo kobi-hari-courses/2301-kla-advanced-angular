@@ -1,15 +1,29 @@
-<app-expander>
-  <div class="the-header" expander-header>
-    <img src="https://cdn-icons-png.flaticon.com/512/2503/2503644.png">
-    <span>Welcome to content projection</span>
-  </div>
-  <h1 class="black">Hello Content</h1>
-  Today we are going to talk about content
-  <button class="button-1" expander-toggle>
-    <span>Open</span>
-    <span expander-on>Close</span>
-  </button>
-</app-expander>
+<div class="fancy">
+  <app-expander>
+    <div class="the-header" expander-header>
+      <img src="https://cdn-icons-png.flaticon.com/512/2503/2503644.png">
+      <span>Welcome to content projection</span>
+    </div>
+    <h1 class="black">Hello Content</h1>
+    Today we are going to talk about content
+    <button class="button-1" expander-toggle>
+      <span>Open</span>
+      <span expander-on>Close</span>
+    </button>
+  </app-expander>
+  
+  <hr>
+  
+  <app-expander header="On our next session" [style.--expander-content-background]="'salmon'">
+    <h1 expander-header>Structural Directives</h1>
+    <h2>Agenda:</h2>
+    <ul>
+      <li>Tempaltes</li>
+      <li>Containers</li>
+      <li>Star Directive</li>
+    </ul>
+  </app-expander>  
+</div>
 
 <hr>
 

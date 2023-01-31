@@ -3,7 +3,7 @@
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     border: 1px solid gray;
-    background-color: lightcyan;
+    background-color: var(--expander-content-background, lightcyan);
 }
 
 .area {
@@ -16,7 +16,7 @@
 .header-area {
     grid-column: 2;
     grid-row: 1;
-    background-color: rgb(141, 210, 210);
+    background-color: var(--expander-header-background, rgb(141, 210, 210));
     flex-direction: row;
     justify-content: start;
 
@@ -24,7 +24,7 @@
 
 .button-area {
     grid-column: 1;
-    background-color: rgb(141, 210, 210);
+    background-color: var(--expander-header-background, rgb(141, 210, 210));
     grid-row: 1;
 }
 

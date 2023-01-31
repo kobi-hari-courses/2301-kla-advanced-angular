@@ -30,3 +30,9 @@ h1.black {
     color: darkgreen;
     border: 1px solid green;
 }
+
+
+.fancy {
+    --expander-header-background: rgb(194, 240, 194);
+    --expander-content-background: lightgreen;
+}
