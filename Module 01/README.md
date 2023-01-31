@@ -4,6 +4,10 @@
 |     |     |
 | --- | --- |
 | [fun-with-di](fun-with-di/) | Introduction to angular Dependency Injection |
+| [fun-with-http](fun-with-http/) | Introduction to angular Http client module |
+| [data-server](data-server/) | Using the `json-server` tool to create a local mock restful data server |
+
+
 
 ### Introduction to Dependency Injection 
 * We talked about the motivation to use a dependency injection infrastructure
@@ -65,3 +69,14 @@
   * return a function object that calls the init method
   * notice that we take advantage of the closure feature.
 * We saw that angular will then await the returned promises and will start rendering the application only once the initializers are all complete.
+
+### Introduction to Http in Angular
+* We talked about the structure of Http Request - Verb, URL, Header, Body
+* We used `HttpClientModule` to provide our services with the `HttpClient` service
+* We used the `HttpClient` Service to create web requests to an online service
+* We saw that the `HttpClient` methods all return Observables
+* We saw that it is preferable to use the `toPromise` operator, to convert the observable to promise.
+* We understood that toPromise is about to be depricated and replaced with: 
+    - firstValueFrom
+    - lastValueFrom
+* We saw how to create development server using the `json-server` tool
