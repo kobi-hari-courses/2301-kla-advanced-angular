@@ -1,0 +1,35 @@
+<div class="colors-area">
+  <app-string-selector [options]="colors" [selectedOption]="selectedColor" (selection)="selectColor($event)">
+    <span *itemTemplate="let item; let sel = selected" [style.color]="item" 
+      [style.font-weight]="sel ? 'bold' : 'normal'"
+    >
+      {{item}}
+    </span>
+  </app-string-selector>
+</div>
+
+<div class="fonts-area">
+  <app-string-selector [options]="fonts" [selectedOption]="selectedFont" (selection)="selectFont($event)">
+    <span *itemTemplate="let item; let s=selected" [style.font-family]="item">
+      <span *ngIf="s">*** </span>
+      {{item}}
+      <span *ngIf="s"> ***</span>
+    </span>
+  </app-string-selector>
+</div>
+
+<div class="sizes-area">
+  <app-string-selector [options]="sizes" [selectedOption]="selectedSize" (selection)="selectSize($event)">
+    <span *itemTemplate="let item" [style.font-size]="item">
+      {{item}}
+    </span>
+  </app-string-selector>
+</div>
+
+<div class="text-area">
+  <textarea [style.color]="selectedColor" [style.font-family]="selectedFont"
+    [style.font-size]="selectedSize"></textarea>
+</div>
+
+<app-language text="Hi there"></app-language>
+<app-language text="מה נשמע"></app-language>

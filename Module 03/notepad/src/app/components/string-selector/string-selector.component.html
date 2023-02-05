@@ -1,0 +1,17 @@
+<div class="item" 
+[class.chosen]="item === selectedOption" 
+*ngFor="let item of options"
+(click)="onUserSelect(item)"
+>
+    <ng-container *ngIf="itemTemplateDirective">
+        <ng-container *ngTemplateOutlet="itemTemplateDirective.template; context: {
+            $implicit: item, 
+            selected: item === selectedOption
+        }">
+
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="!itemTemplateDirective">
+        {{item}}
+    </ng-container>
+</div>
