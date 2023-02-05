@@ -2,6 +2,10 @@ table {
     border-collapse: collapse;
 }
 
+button {
+    border: 5px solid magenta;
+}
+
 td, th {
     border: 1px solid gray;
     padding: 4px;

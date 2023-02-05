@@ -1,4 +1,27 @@
 <h1>Do not put your hand on a hot plate</h1>
+<button (click)="toggle()">Toggle</button>
+
+<button *ngIf="showButton"></button>
+
+<ng-template [ngIf]="showButton">
+  <button></button>
+</ng-template>
+
+<div *ngFor="let clr of colors" [style.color]="clr">
+  {{clr}}
+</div>
+
+<ng-template ngFor [ngForOf]="colors" let-clr>
+  <div [style.color]="clr">
+    {{clr}}
+  </div>  
+</ng-template>
+
+<!-- 
+<ng-template [ngIf]="showButton">
+  <button >Hey! I am here</button>
+</ng-template>
+
 
 <ng-template #template1 let-mispar="count" let-tseva="color">
   <h2>This is a nice day, vid = {{mispar}}</h2>
@@ -6,3 +29,12 @@
 </ng-template>
 
 <app-repeater [template]="template1"></app-repeater>
+
+
+<ng-template appStam>
+  <h1>This is an amazing Template</h1>
+</ng-template>
+
+<h1 *appStam>This is an amazing template</h1>
+
+ -->

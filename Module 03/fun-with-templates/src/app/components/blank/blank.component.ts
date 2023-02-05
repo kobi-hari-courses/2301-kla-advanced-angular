@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./blank.component.css']
 })
 export class BlankComponent {
+
+  underlineColor: string = 'red';
+
   constructor() {
     console.log('Blank Component Created');
   }

@@ -16,11 +16,19 @@ interface Student {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  showButton = false;
+  toggle() {
+    this.showButton = !this.showButton;
+  }
+
   avarageScore(student: Student): number {
     const scores = student.scores.map(s => s.score);
     const sum = scores[0] + scores[1];
     return sum / 2;
   }
+
+  colors = ['red', 'green', 'blue'];
 
 
   subjects: string[] = ['Math', 'Science'];
