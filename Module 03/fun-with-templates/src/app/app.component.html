@@ -1,0 +1,8 @@
+<h1>Do not put your hand on a hot plate</h1>
+
+<ng-template #template1 let-mispar="count" let-tseva="color">
+  <h2>This is a nice day, vid = {{mispar}}</h2>
+  <h3>My favorite color is <span [style.color]="tseva">{{tseva}}</span></h3>
+</ng-template>
+
+<app-repeater [template]="template1"></app-repeater>

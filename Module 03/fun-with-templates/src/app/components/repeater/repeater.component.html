@@ -1,0 +1,10 @@
+<ng-container *ngIf="template">
+    <ng-container *ngTemplateOutlet="template; context: {count: 1, color: 'green'}"></ng-container>
+    <div class="divider"></div>
+    <ng-container *ngTemplateOutlet="template; context: {count: 2, color: 'red'}"></ng-container>
+    <div class="divider"></div>
+    <ng-container *ngTemplateOutlet="template; context: {count: 3, color: 'magenta'}"></ng-container>
+</ng-container>
+<ng-container *ngIf="!template">
+    <h3>There is no input template</h3>
+</ng-container>
