@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 10px;
+}
+
+h1 {
+    border-bottom: 1px solid green;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+}

@@ -1,40 +1,35 @@
 <h1>Do not put your hand on a hot plate</h1>
-<button (click)="toggle()">Toggle</button>
+<button (click)="toggleStudents()">Toggle</button>
+<button (click)="addStudent()">Add Student</button>
 
-<button *ngIf="showButton"></button>
-
-<ng-template [ngIf]="showButton">
-  <button></button>
-</ng-template>
-
-<div *ngFor="let clr of colors" [style.color]="clr">
-  {{clr}}
+<div *ngFor="let st of students trackBy trackByStudent; let i = index; let f = first; let l = last; let e = even, let o = odd">
+  <app-student-presenter [student]="st" [class.even]="e" [class.first]="f" [class.last]="l">
+  
+  </app-student-presenter>  
 </div>
 
-<ng-template ngFor [ngForOf]="colors" let-clr>
-  <div [style.color]="clr">
-    {{clr}}
-  </div>  
-</ng-template>
 
-<!-- 
+
+
+<button *ngIf="showButton">Hey, I am a button</button>
+
 <ng-template [ngIf]="showButton">
-  <button >Hey! I am here</button>
+  <button>Hey, I am a button</button>
 </ng-template>
 
+<button *myIf="showButton">Hey, I am a button</button>
 
-<ng-template #template1 let-mispar="count" let-tseva="color">
-  <h2>This is a nice day, vid = {{mispar}}</h2>
-  <h3>My favorite color is <span [style.color]="tseva">{{tseva}}</span></h3>
+<ng-template [myIf]="showButton">
+  <button>Hey, I am a button</button>
 </ng-template>
 
-<app-repeater [template]="template1"></app-repeater>
+<input type="number" [value]="count" (input)="count = num1.valueAsNumber" #num1>
+<input type="number" [value]="starter" (input)="starter = num2.valueAsNumber" #num2>
+<input type="number" [value]="step" (input)="step = num3.valueAsNumber" #num3>
+
+<div *myRepeat="count startWith starter let index  skip step let rishon = first">
+  <app-blank [index]="index" [color]="rishon ? 'yellow' : 'green'"></app-blank>
+</div>
 
 
-<ng-template appStam>
-  <h1>This is an amazing Template</h1>
-</ng-template>
 
-<h1 *appStam>This is an amazing template</h1>
-
- -->

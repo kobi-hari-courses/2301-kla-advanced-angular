@@ -20,7 +20,7 @@ export class StamDirective implements OnInit {
       const v2 = this.vcr.createComponent(BlankComponent);
 
       setTimeout(() => {
-        v2.instance.underlineColor = 'green';
+        v2.instance.color = 'green';
       }, 2000);
 
 

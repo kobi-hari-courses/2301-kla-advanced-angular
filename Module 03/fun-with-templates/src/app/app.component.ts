@@ -1,14 +1,6 @@
 import { Component } from '@angular/core';
-
-interface ExamScore {
-  exam: string;
-  score: number;
-}
-
-interface Student {
-  name: string;
-  scores: ExamScore[];
-}
+import { STUDENTS_1, STUDENTS_2 } from './data';
+import { Student } from './models/data-model';
 
 @Component({
   selector: 'app-root',
@@ -16,10 +8,35 @@ interface Student {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  count = 4;
+  starter = 2;
+  step = 6;
 
   showButton = false;
   toggle() {
     this.showButton = !this.showButton;
+  }
+
+  toggleStudents() {
+    if (this.students === STUDENTS_1) {
+      this.students = STUDENTS_2
+    } else {
+      this.students = STUDENTS_1
+    }
+  }
+
+  addStudent() {
+    this.students.push({
+      id: 'eeee', 
+      name: 'Student Chadash', 
+      scores: []
+    });
+
+    this.students[0].name = 'Moyshe Levy';
+  }
+
+  trackByStudent(index: number, item: Student) {
+    return item.id;
   }
 
   avarageScore(student: Student): number {
@@ -28,64 +45,11 @@ export class AppComponent {
     return sum / 2;
   }
 
-  colors = ['red', 'green', 'blue'];
+  colors = ['red', 'green', 'blue', 'megenta', 'orange', 'cyan', 'purple'];
 
 
   subjects: string[] = ['Math', 'Science'];
 
-  students: Student[] = [{
-    name: 'Paul Smith',
-    scores: [
-      {
-        exam: 'Math',
-        score: 45
-      },
-      {
-        exam: 'Science',
-        score: 100
-      }
-    ]
-  },
-  {
-    name: 'Mary John',
-    scores: [
-      {
-        exam: 'Math',
-        score: 87
-      },
-      {
-        exam: 'Science',
-        score: 100
-      }
-    ]
-  },
-
-  {
-    name: 'John Smith',
-    scores: [
-      {
-        exam: 'Math',
-        score: 65
-      },
-      {
-        exam: 'Science',
-        score: 78
-      }
-    ]
-  }, {
-    name: 'Jane Doe',
-    scores: [
-      {
-        exam: 'Math',
-        score: 90
-      },
-      {
-        exam: 'Science',
-        score: 100
-      }
-    ]
-  }
-
-  ]
+  students: Student[] = STUDENTS_1;
 
 }

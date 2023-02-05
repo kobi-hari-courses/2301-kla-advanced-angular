@@ -3,10 +3,22 @@ table {
 }
 
 button {
-    border: 5px solid magenta;
+    margin: 8px;
 }
 
 td, th {
     border: 1px solid gray;
     padding: 4px;
+}
+
+.even {
+    background-color: lightgray;
+}
+
+.first {
+    border-top: 4px solid black;
+}
+
+.last {
+    border-bottom: 4px solid black;
 }
