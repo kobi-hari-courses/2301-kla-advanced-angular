@@ -7,6 +7,11 @@ import { BehaviorSubject, interval, Observable, Observer, of, Subject, timer } f
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  showReader = true;
+  toggle() {
+    this.showReader = !this.showReader;
+  }
+
 
   createObserver(id: string): Observer<number> {
     return {
