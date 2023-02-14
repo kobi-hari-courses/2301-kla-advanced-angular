@@ -1,0 +1,26 @@
+:host {
+    display: grid;
+    flex-direction: row;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    background-color: lightblue;
+}
+
+li {
+    display: flex;
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+a.selected {
+    background-color: rgb(121, 176, 195);
+}
