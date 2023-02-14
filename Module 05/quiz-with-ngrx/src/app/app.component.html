@@ -1,3 +1,5 @@
+<app-progress></app-progress>
+
 <ng-container *ngIf="question$ | async as question">
     <h1>{{question.caption}}</h1>
     <div class="answers">
@@ -9,5 +11,7 @@
         </div>
     </div>
 </ng-container>
+
+<app-quiz-done *ngIf="quizDone$ | async"></app-quiz-done>
 
 <button (click)="onReset()">Reset</button>

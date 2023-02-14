@@ -12,6 +12,7 @@ import { QuizActions, QuizSelectors } from './redux/quiz.types';
 })
 export class AppComponent implements OnInit {
   question$!: Observable<Question>;
+  quizDone$ = this.store.select(QuizSelectors.quizDone);
 
   constructor(private store: Store<any>){}
 

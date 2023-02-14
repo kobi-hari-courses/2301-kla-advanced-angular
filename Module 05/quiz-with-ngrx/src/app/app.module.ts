@@ -6,10 +6,14 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppComponent } from './app.component';
 import { quizReducer } from './redux/quiz.reducer';
 import { QuizFeatureKey } from './redux/quiz.state';
+import { ProgressComponent } from './components/progress/progress.component';
+import { QuizDoneComponent } from './components/quiz-done/quiz-done.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProgressComponent,
+    QuizDoneComponent
   ],
   imports: [
     BrowserModule, 

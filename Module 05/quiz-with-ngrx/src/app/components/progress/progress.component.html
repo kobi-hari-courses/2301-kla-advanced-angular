@@ -1,0 +1,5 @@
+<div *ngFor="let item of vm$ | async"
+    [class.correct]="item === 'Correct'"
+    [class.wrong]="item === 'Wrong'"
+>
+</div>

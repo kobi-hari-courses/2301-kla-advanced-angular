@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+}
+
+div {
+    flex: 1;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+    margin: 4px;
+}
+
+div.correct {
+    background-color: green;
+}
+
+div.wrong {
+    background-color: red;
+}

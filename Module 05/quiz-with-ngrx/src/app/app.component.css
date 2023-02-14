@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+app-progress {
+    align-self: stretch;
+}
+
 h1 {
     margin: 10px;
 }
