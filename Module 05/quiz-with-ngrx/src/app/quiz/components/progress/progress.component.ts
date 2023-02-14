@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { combineLatest, map, Observable } from 'rxjs';
 import { Answer } from 'src/app/models/answer.mode';
-import { QuizSelectors } from 'src/app/redux/quiz.types';
+import { QuizSelectors } from 'src/app/quiz/redux/quiz.types';
 import { ProgressItem, ProgressViewModel } from './progress.vm';
 
 @Component({
-  selector: 'app-progress',
+  selector: 'quiz-progress',
   templateUrl: './progress.component.html',
   styleUrls: ['./progress.component.css']
 })

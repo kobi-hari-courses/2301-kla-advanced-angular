@@ -4,22 +4,16 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
-import { quizReducer } from './redux/quiz.reducer';
-import { QuizFeatureKey } from './redux/quiz.state';
-import { ProgressComponent } from './components/progress/progress.component';
-import { QuizDoneComponent } from './components/quiz-done/quiz-done.component';
+import { QuizModule } from './quiz/quiz.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProgressComponent,
-    QuizDoneComponent
   ],
   imports: [
     BrowserModule, 
-    StoreModule.forRoot({
-      [QuizFeatureKey]: quizReducer 
-    }), 
+    QuizModule,
+    StoreModule.forRoot(), 
     StoreDevtoolsModule.instrument({
       maxAge: 50
     })

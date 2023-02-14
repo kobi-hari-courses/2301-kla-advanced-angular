@@ -1,6 +1,6 @@
-import { AllQuestions } from "../models/all-questions";
-import { Answer } from "../models/answer.mode";
-import { Question } from "../models/question.model";
+import { AllQuestions } from "../../models/all-questions";
+import { Answer } from "../../models/answer.mode";
+import { Question } from "../../models/question.model";
 
 export const QuizFeatureKey = 'quiz';
 

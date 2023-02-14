@@ -1,0 +1,17 @@
+<quiz-progress></quiz-progress>
+
+<ng-container *ngIf="question$ | async as question">
+    <h1>{{question.caption}}</h1>
+    <div class="answers">
+        <div 
+            *ngFor="let answer of question.answers; let i = index"
+            (click)="onAnswer(i)"
+            >
+            {{i+1}}. {{answer}}
+        </div>
+    </div>
+</ng-container>
+
+<quiz-done *ngIf="quizDone$ | async"></quiz-done>
+
+<button (click)="onReset()">Reset</button>
