@@ -6,6 +6,7 @@ import { StoreModule } from "@ngrx/store";
 import { QuizFeatureKey } from "./redux/quiz.state";
 import { quizReducer } from "./redux/quiz.reducer";
 import { CommonModule } from "@angular/common";
+import { QuizRoutingModule } from "./quiz-routing.module";
 
 @NgModule({
     declarations: [
@@ -15,6 +16,7 @@ import { CommonModule } from "@angular/common";
     ], 
     imports: [
         CommonModule,
+        QuizRoutingModule,
         StoreModule.forFeature(QuizFeatureKey, quizReducer)
     ], 
     exports: [

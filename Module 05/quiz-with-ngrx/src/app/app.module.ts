@@ -5,7 +5,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { QuizModule } from './quiz/quiz.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
@@ -19,7 +18,6 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
   ],
   imports: [
     BrowserModule, 
-    QuizModule,
     StoreModule.forRoot(), 
     AppRoutingModule,
     StoreDevtoolsModule.instrument({
